@@ -1038,85 +1038,6 @@ k8s-worker1   Ready
 
 ---
 
-# GitHub Project Structure
-
-~~~text
-k8s-pod-migration-demo/
-├── webapp/
-│   ├── index.html
-│   └── Dockerfile
-├── k8s/
-│   ├── deployment.yaml
-│   └── service.yaml
-├── screenshots/
-│   └── .gitkeep
-└── README.md
-~~~
-
-Create screenshots folder:
-
-~~~bash
-cd ~/k8s-pod-migration-demo
-mkdir -p screenshots
-touch screenshots/.gitkeep
-~~~
-
----
-
-# Push Project to GitHub
-
-Configure Git:
-
-~~~bash
-git config --global user.name "saivishwaksena"
-git config --global user.email "saivishwaksena77@gmail.com"
-~~~
-
-Initialize Git repository:
-
-~~~bash
-cd ~/k8s-pod-migration-demo
-git init
-git add .
-git commit -m "Initial commit: Kubernetes pod migration demo"
-~~~
-
-Add GitHub remote:
-
-~~~bash
-git branch -M main
-git remote add origin https://github.com/saivishwaksena/k8s-pod-migration-demo.git
-~~~
-
-Push:
-
-~~~bash
-git push -u origin main
-~~~
-
-GitHub does not support password authentication from terminal. Use a GitHub Personal Access Token as the password.
-
----
-
-# Screenshots to Add
-
-Add screenshots for proof:
-
-1. VMware 3 VM setup
-2. Hostname and IP verification
-3. `kubectl get nodes -o wide`
-4. `kubectl get pods -A -o wide`
-5. Docker image in Docker Hub
-6. `kubectl get deployments`
-7. `kubectl get svc`
-8. Web application running in browser
-9. Pods before drain
-10. Drain command output
-11. Pods after drain
-12. Browser access after migration
-13. GitHub repository page
-
----
 
 # Problems Faced and Fixes
 
@@ -1181,19 +1102,7 @@ sudo systemctl restart kubelet
 
 ---
 
-## Problem 4: GitHub password authentication failed
 
-Error:
-
-~~~text
-Password authentication is not supported for Git operations.
-~~~
-
-Fix:
-
-Used GitHub Personal Access Token instead of normal GitHub password.
-
----
 
 # Important Commands Summary
 
